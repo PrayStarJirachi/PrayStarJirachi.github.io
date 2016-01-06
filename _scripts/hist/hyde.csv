@@ -1,0 +1,9 @@
+files,language,blank,comment,code,"http://cloc.sourceforge.net v 1.64  T=5.04 s (30.2 files/s, 4593.7 lines/s)"
+63,Python,1846,2878,6688
+13,Javascript,1601,1337,5448
+37,HTML,432,4,1681
+11,CSS,105,6,645
+18,YAML,15,32,323
+4,SASS,11,0,36
+3,LESS,3,0,21
+3,XML,7,13,16

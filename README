@@ -1,0 +1,14 @@
+# StatisGen
+
+This project's aim is to deliver statistic on the development of static site generators.
+
+I know there are some project like that as http://staticgen.com or
+https://staticsitegenerators.net/ but what I dislike most is the default sort by starred
+project.
+
+I prefer sort project by total numbers of contributors. I think it is more realist to
+measure project activity.
+
+In the future, I want to include more statistics about Git activity.
+
+It is based on Jekyll, you can see it online there : http://lomiglavnek.github.io/

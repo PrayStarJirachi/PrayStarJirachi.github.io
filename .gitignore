@@ -1,28 +1,8 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+_site
+.sass-cache
+.jekyll-metadata
+_scripts/secretGithub.py
+_scripts/secretGithub.sh
+_scripts/__pycache__
+_scripts/secretGithub.pyc
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app

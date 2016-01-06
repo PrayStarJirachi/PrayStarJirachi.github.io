@@ -1,0 +1,210 @@
+---
+layout: intro
+---
+    <body>
+
+        <!-- Aside Start-->
+        <aside class="left-panel">
+
+            <!-- brand -->
+            <div class="logo">
+                <a href="{{ "/index.html" | prepend: site.baseurl }}" class="logo-expanded">
+                    <span class="nav-label">StatisGen</span>
+                </a>
+            </div>
+            <!-- / brand -->
+        
+            <!-- Navbar Start -->
+            <nav class="navigation">
+                <ul class="list-unstyled">
+                    <li><a href="../index.html"><span class="nav-label">Static
+            Site Generator List</span></a></li>
+            			<li><a href="../index-codeline.html"><span class="nav-label">Code lines comparison</span></a></li>
+			<div class="logo">
+				 <a href="#" class="logo-expanded">
+                    <span class="nav-label">{{ page.title }}</span>
+                   </a>
+            </div>
+			<li class="active"><a href="../details/{{ page.title }}.html"><span class="nav-label">General</span></a></li>
+                	<li><a href="../cloc/{{ page.title }}.html"><span class="nav-label">Line of code</span></a></li>
+		</ul>
+            </nav>
+                
+        </aside>
+        <!-- Aside Ends-->
+
+
+        <!--Main Content Start -->
+        <section class="content">
+            
+            <!-- Header -->
+            <header class="top-head container-fluid">
+                <button type="button" class="navbar-toggle pull-left">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </header>
+            <!-- Header Ends -->
+
+
+            <!-- Page Content Start -->
+            <!-- ================== -->
+
+            <div class="wraper container-fluid">
+                <div class="row">
+                   <div class="col-lg-4">
+                         <div class="profile-widget text-center">
+                            <div class="bg-inverse bg-profile"></div>
+                            <img src="{{ page.avatar }}" class="thumb-lg img-circle img-thumbnail" alt="img">
+                            <h3>{{ page.title }}</h3>
+                            <p>Language: {{ page.language }}</p>
+                            <a href="{{ page.html_url }}" class="btn btn-sm btn-inverse m-t-20">View on Github</a>
+                            <ul class="list-inline widget-list clearfix">
+                                <li class="col-md-4"><span>{{ page.stargazer }} <i class="fa fa-star"></i></span></li>
+                                <li class="col-md-4"><span>{{ page.fork }} <i class="fa fa-code-fork"></i></span></li>
+                                <li class="col-md-4"><span>{{ page.issues }} <i class="fa fa-bug"></i></span></li>
+                            </ul>
+                        </div>
+                    </div> 
+
+                    <div class="col-lg-8">
+                        <div class="portlet"><!-- /primary heading -->
+                            <div class="portlet-heading">
+                                <h3 class="portlet-title text-dark text-uppercase">
+                                    Overall contributors
+                                </h3>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="portlet1" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div id="morris-cumul-contributeurs" style="height: 295px;"></div>
+
+                                </div>
+                            </div>
+                        </div> <!-- /Portlet -->
+
+                    </div> <!-- end col -->
+                    <div class="col-lg-4">
+                        <div class="portlet"><!-- /primary heading -->
+                            <div class="portlet-heading">
+                                <h3 class="portlet-title text-dark text-uppercase">
+                                    More Infos
+                                </h3>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="portlet1" class="panel-collapse collapse in">
+                                <div class="portlet-body" style="height: 325px;">
+                                    <p>Site web : <a href="{{ page.homepage }}">{{ page.homepage }}</a></p>
+                                    <p>{{ page.description }}</p>
+                                    <p>Créé le : {{ page.created }}</p>
+                                    <p>Dernière mise à jour : {{ page.update }}</p>
+
+                                </div>
+                            </div>
+                        </div> <!-- /Portlet -->
+
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="portlet"><!-- /primary heading -->
+                            <div class="portlet-heading">
+                                <h3 class="portlet-title text-dark text-uppercase">
+                                    Overall commits
+                                </h3>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div id="portlet1" class="panel-collapse collapse in">
+                                <div class="portlet-body">
+                                    <div id="morris-nombre-commits" style="height: 295px;"></div>
+
+                                </div>
+                            </div>
+                        </div> <!-- /Portlet -->
+
+                    </div>
+
+                </div> <!-- End row -->
+                {{ content }}
+
+
+
+            </div>
+            <!-- Page Content Ends -->
+            <!-- ================== -->
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                Fork me on github !
+            </footer>
+            <!-- Footer Ends -->
+
+
+
+        </section>
+        <!-- Main Content Ends -->
+        
+
+
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src={{ "/js/jquery.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/js/bootstrap.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/js/modernizr.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/js/pace.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/js/wow.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/js/jquery.scrollTo.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/js/jquery.nicescroll.js" | prepend: site.baseurl }} type="text/javascript"></script>
+        <script src={{ "/assets/chat/moment-2.2.1.js" | prepend: site.baseurl }}></script>
+
+        <!-- Counter-up -->
+        <script src={{ "/js/waypoints.min.js" | prepend: site.baseurl }} type="text/javascript"></script>
+        <script src={{ "/js/jquery.counterup.min.js" | prepend: site.baseurl }} type="text/javascript"></script>
+
+        <!-- EASY PIE CHART JS -->
+        <script src={{ "/assets/easypie-chart/easypiechart.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/assets/easypie-chart/jquery.easypiechart.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/assets/easypie-chart/example.js" | prepend: site.baseurl }}></script>
+
+
+        <!--C3 Chart-->
+        <script src={{ "/assets/c3-chart/d3.v3.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/assets/c3-chart/c3.js" | prepend: site.baseurl }}></script>
+
+        <!--Morris Chart-->
+        <script src={{ "/assets/morris/morris.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/assets/morris/raphael.min.js" | prepend: site.baseurl }}></script>
+
+        <!-- sparkline --> 
+        <script src={{ "/assets/sparkline-chart/jquery.sparkline.min.js" | prepend: site.baseurl }} type="text/javascript"></script>
+        <script src={{ "/assets/sparkline-chart/chart-sparkline.js" | prepend: site.baseurl }} type="text/javascript"></script> 
+
+        <!-- sweet alerts -->
+        <script src={{ "/assets/sweet-alert/sweet-alert.min.js" | prepend: site.baseurl }}></script>
+        <script src={{ "/assets/sweet-alert/sweet-alert.init.js" | prepend: site.baseurl }}></script>
+
+        <script src={{ "/js/jquery.app.js" | prepend: site.baseurl }}></script>
+        <!-- Chat -->
+        <script src={{ "/js/jquery.chat.js" | prepend: site.baseurl }}></script>
+        <!-- Dashboard -->
+        <script src="/js/sgen/{{ page.title }}.js"></script>
+
+        <!-- Todo -->
+        <script src={{ "/js/jquery.todo.js" | prepend: site.baseurl }}></script>
+
+
+        <script type="text/javascript">
+        /* ==============================================
+             Counter Up
+             =============================================== */
+            jQuery(document).ready(function($) {
+                $('.counter').counterUp({
+                    delay: 100,
+                    time: 1200
+                });
+            });
+        </script>
+    
+
+    </body>
+</html>
