@@ -1,9 +1,0 @@
-files,language,blank,comment,code,"http://cloc.sourceforge.net v 1.64  T=3.12 s (41.7 files/s, 4698.4 lines/s)"
-65,Javascript,2700,103,7222
-27,LESS,603,527,1631
-4,CSS,170,259,461
-7,HTML,134,90,436
-11,JSON,10,0,133
-14,Mustache,39,0,102
-1,Bourne Shell,3,0,24
-1,CoffeeScript,1,0,2
